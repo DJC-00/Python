@@ -1,0 +1,11 @@
+cd <Directory> - change directory
+clear | cls - Clear Screen (Shortcut - Ctrl + L)
+ls | dir - Shows current directories, file, and folders
+touch <fileName> - Create file with given name
+mkdir <folderName> - Create folder with given name 
+rm | del <fileName> - removes a file or a folder by the given name
+rm -rf <folderName> - Removes given folder and all files within
+mv <src> <dest> - moves a file or folder to the given directory
+cp | copy <src> <dest> - Copies the given folder/file to destination directory
+code <dir> - Opens VSCode in the given directory
+open / explorer <dest> - Opens a directory in either explorer or finder
