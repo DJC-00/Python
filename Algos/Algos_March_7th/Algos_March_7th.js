@@ -7,13 +7,12 @@
 // with Array?
 // ===================================
 function acronym(str) {
-    str = str.toUpperCase();
-    console.log(str)
+    //str = str.toUpperCase();
     acr = [];
-    acr.push(str[0])
+    acr.push(str[0].toUpperCase())
     for(i=0; i< str.length; i++){
         if (str[i] == " "){
-            acr.push(str[i+1]);
+            acr.push(str[i+1].toUpperCase());
         }
     }
     // acr = acr.toUpperCase();
