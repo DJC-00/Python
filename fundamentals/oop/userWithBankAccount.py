@@ -94,6 +94,8 @@ class BankAccount:
         for i in range(len(cls.allAccounts)):
             print(cls.allAccounts[i])
 
+
+# Testing
 test = User("testName", "testEmail")
 test2 = User("difName", "difEmail")
 test.accountInfo()
