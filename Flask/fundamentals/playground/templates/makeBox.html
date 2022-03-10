@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            --boxColor: var(boxColor);
+        }
+
+        .boxDiv{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(167, 202, 211);
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .box{
+            margin: 20px;
+            border: 3px black solid;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin: 0 auto;">
+        <h1>Creating {{boxNum}} {{boxColor}} Boxes</h1>
+        <div class="boxDiv">
+            {% for i in range(boxNum): %}
+                <div class = "box" style="background-color: {{boxColor}};"></div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
