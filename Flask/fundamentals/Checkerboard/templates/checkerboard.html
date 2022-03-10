@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <style>
+        *{
+            --color1: var(color1);
+            --color1: var(color2);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkerboard!</h1>
+    </header>
+    <main>
+        {% for i in range(rows) %}
+        <div class="cRow">
+            {% for j in range(cols) %}
+                {% if (j%2 == 0 and i%2 == 0) %}
+                    <div class="cBox" style="background-color: {{color1}};;"></div>
+                {% elif (j%2 == 0 and i%2 != 0) %}
+                    <div class="cBox" style="background-color: {{color2}};;"></div>
+                {% elif (j%2 != 0 and i%2 == 0) %}
+                    <div class="cBox" style="background-color: {{color2}};;"></div>
+                {% elif (j%2 != 0 and i%2 != 0) %}
+                    <div class="cBox" style="background-color: {{color1}};;"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </main>
+    
+</body>
+</html>
