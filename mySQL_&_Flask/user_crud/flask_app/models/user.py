@@ -28,3 +28,21 @@ class User:
         query = "INSERT INTO users ( first_name, last_name, email, created_at, updated_at) VALUES ( %(firstName)s,%(lastName)s,%(email)s,NOW(),NOW() );"
         queryResults = connectToMySQL(cls.db).query_db(query,data)
         return queryResults
+
+    @classmethod
+    def getOneUser(cls,data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        queryResult = connectToMySQL(cls.db).query_db(query,data)
+        return cls(queryResult[0])
+
+    @classmethod
+    def confirmEdit(cls,data):
+        query = "UPDATE users SET first_name = %(firstName)s, last_name = %(lastName)s, email = %(email)s WHERE id = %(id)s;"
+        queryResult = connectToMySQL(cls.db).query_db(query,data)
+        return queryResult
+
+    @classmethod
+    def deleteUser(cls,data):
+        query = "DELETE FROM users WHERE id = %(id)s;"
+        queryResult = connectToMySQL(cls.db).query_db(query,data)
+        return queryResult
