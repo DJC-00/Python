@@ -9,12 +9,10 @@
 
 </head>
 <body>
-    <h1>{{one_friend.first_name}}s Profile</h1>
-    <p>{{one_friend.first_name}} {{one_friend.last_name}}</p>
-    <p>Age: {{one_friend.age}}</p>
-    <p>Occupation: {{one_friend.occupation}}</p>
-    <p>Faction: {{one_friend.faction.name}}</p>
-    <p>Difficulty: {{one_friend.faction.level}}</p>
-    <p>Est: {{one_friend.faction.dateCreated}}</p>
+
+    {% for element in oneFaction.factionMembers %}
+        <p>{{element.first_name}}</p>
+    {% endfor %}
+
 </body>
 </html>
