@@ -1,6 +1,7 @@
 # Import function that will return an instance of a connection
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import faction
+from flask import flash
 # model the class after the friend table from our database
 class Friend:
     db = "first_flask"
@@ -13,6 +14,32 @@ class Friend:
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         self.faction = {}
+
+    #=\/==\/==\/==\/=Validations=\/==\/==\/==\/=
+
+    @staticmethod
+    def validateFriend(rawFormData):
+        isValid = True
+
+        if len(rawFormData["fname"]) < 2:
+            flash("First Name must be at least 2 characters long")
+            isValid = False
+        if len(rawFormData["lname"]) < 2:
+            flash("First Name must be at least 2 characters long")
+            isValid = False
+        if len(rawFormData["occ"]) < 4:
+            flash("First Name must be at least 2 characters long")
+            isValid = False
+        if len(rawFormData["age"]) < 1:
+            flash("ENTER AN AGE!")
+            isValid = False
+        elif int(rawFormData["age"]):
+            flash("YOU ARE TOO YOUNG!")
+        
+
+        return isValid;
+
+    #=/\==/\==/\==/\=Validations=/\==/\==/\==/\=
 
     # Use the class method to query the database
     @classmethod
@@ -43,7 +70,7 @@ class Friend:
     @classmethod
     def getFriendWithFaction(cls, data):
         query = """SELECT * FROM friends
-                JOIN factions ON friends.factions_id = factions.id
+                LEFT JOIN factions ON friends.factions_id = factions.id
                 WHERE friends.id = %(id)s;"""
 
         queryResult = connectToMySQL(cls.db).query_db(query,data)

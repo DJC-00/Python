@@ -1,5 +1,5 @@
 from flask_app import app
-from flask import render_template,redirect,request
+from flask import render_template,redirect,request,flash
 
 from flask_app.models.friend import Friend
 from flask_app.models.faction import Faction
@@ -31,6 +31,9 @@ def add_friend():
 
 @app.route('/createFriend', methods=["POST"])
 def createFriend():
+
+    if not Friend.validateFriend(request.form):
+        return redirect ("/addFriend")
     # First we make a data dictionary from our request.form coming from our template.
     # The keys in data need to line up exactly with the variables in our query string.
     data = {

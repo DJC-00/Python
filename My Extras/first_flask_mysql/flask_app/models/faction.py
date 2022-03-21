@@ -14,6 +14,8 @@ class Faction:
         self.updated_at = data["updated_at"]
 
         self.factionMembers = [] #placeholder for list of friends
+    
+
 
     @classmethod
     def createNewFaction(cls,data):
