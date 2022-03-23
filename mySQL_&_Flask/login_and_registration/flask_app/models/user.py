@@ -1,6 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
-from flask import flash, redirect
+from flask import flash
 from flask_bcrypt import Bcrypt
+bcrypt = Bcrypt(app)
 from flask_app import app
 import re	# the regex module
 # create a regular expression object that we'll use later   

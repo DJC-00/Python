@@ -1,0 +1,12 @@
+id,name,breed,age,created_at,updated_at,owners_id,id,first_name,last_name,email,password,created_at,updated_at
+1,Momo,"Shiba Inu",3,NULL,NULL,27,27,Donald,Castle,djcastle2172@gmail.com,$2b$12$9cqYYd12qFXUkI9IRh/jLelInXSUz0lN400IknnxaS.wvRVG814Sm,"2022-03-22 22:22:14","2022-03-22 22:22:14"
+2,"Bark Twain","Airedale Terrier",5,NULL,NULL,1,1,Dogman,Jenkins,DMJ@gmail.com,NULL,"2022-03-22 14:25:59","2022-03-22 14:25:59"
+3,"Mary Puppins",Collie,5,NULL,NULL,1,1,Dogman,Jenkins,DMJ@gmail.com,NULL,"2022-03-22 14:25:59","2022-03-22 14:25:59"
+4,"Snoop Dog","German Shepard",5,NULL,NULL,2,2,Dog,"The Bounty Hunter",dogbounty@gmail.com,NULL,"2022-03-22 14:26:56","2022-03-22 14:26:56"
+5,Chew-barka,"Old English Sheepdog",5,NULL,NULL,2,2,Dog,"The Bounty Hunter",dogbounty@gmail.com,NULL,"2022-03-22 14:26:56","2022-03-22 14:26:56"
+6,"Black Betty","Airedale Terrier",5,NULL,NULL,2,2,Dog,"The Bounty Hunter",dogbounty@gmail.com,NULL,"2022-03-22 14:26:56","2022-03-22 14:26:56"
+7,Chunk,"English Bulldog",5,NULL,NULL,2,2,Dog,"The Bounty Hunter",dogbounty@gmail.com,NULL,"2022-03-22 14:26:56","2022-03-22 14:26:56"
+8,Hatred,"Jack Russel Terrier",5,NULL,NULL,3,3,Hound,McMaster,thehound@gmail.com,NULL,"2022-03-22 14:27:54","2022-03-22 14:27:54"
+9,Sherlock,"Scottish Terrier",5,NULL,NULL,4,4,Bilbo,Baggins,hairyfeet@gmail.com,NULL,"2022-03-22 14:28:38","2022-03-22 14:28:38"
+10,Pikachu,"Electric Mouse",5,NULL,NULL,4,4,Bilbo,Baggins,hairyfeet@gmail.com,NULL,"2022-03-22 14:28:38","2022-03-22 14:28:38"
+11,"Ricky Bobby","Golden Retriever",5,NULL,NULL,4,4,Bilbo,Baggins,hairyfeet@gmail.com,NULL,"2022-03-22 14:28:38","2022-03-22 14:28:38"
